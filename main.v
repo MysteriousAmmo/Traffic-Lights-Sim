@@ -76,17 +76,17 @@ module control(input wire timer,
                 Road2_state <= RED;
                 Road3_state <= GREEN;
             end
-            3 * GREEN_PERIOD + YELLOW_PERIOD - 1: begin
+            3 * GREEN_PERIOD + 2 * YELLOW_PERIOD - 1: begin
                 Road3_state <= YELLOW;
             end
-            3 * GREEN_PERIOD + 2 * YELLOW_PERIOD - 1: begin
+            3 * GREEN_PERIOD + 3 * YELLOW_PERIOD - 1: begin
                 Road3_state <= RED;
                 Road4_state <= GREEN;
             end
-            4 * GREEN_PERIOD + 2 * YELLOW_PERIOD - 1: begin
+            4 * GREEN_PERIOD + 3 * YELLOW_PERIOD - 1: begin
                 Road4_state <= YELLOW;
             end
-            4 * GREEN_PERIOD + 3 * YELLOW_PERIOD - 1: begin
+            4 * GREEN_PERIOD + 4 * YELLOW_PERIOD - 1: begin
                 Road4_state <= RED;
                 Road1_state <= GREEN;
                 count <= 0;
